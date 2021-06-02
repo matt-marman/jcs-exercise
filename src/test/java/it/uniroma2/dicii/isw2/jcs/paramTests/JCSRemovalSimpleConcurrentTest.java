@@ -2,8 +2,11 @@ package it.uniroma2.dicii.isw2.jcs.paramTests;
 
 import static org.junit.Assert.*;
 
-import org.apache.jcs.JCS;
+import org.junit.BeforeClass;
 import org.junit.Test;
+
+import org.apache.jcs.JCS;
+import org.apache.jcs.access.exception.CacheException;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -24,60 +27,77 @@ import org.junit.Test;
  * under the License.
  */
 
-import junit.framework.TestCase;
-
 /**
  * Verify that basic removal functionality works.
  */
 public class JCSRemovalSimpleConcurrentTest
-    extends TestCase
 {
+	private static int count = 0;
+	private static JCS jcs;
     /**
      * Constructor for the TestDiskCache object.
      *
      * @param testName
      */
+	
+	/*
     public JCSRemovalSimpleConcurrentTest( String testName )
     {
         super( testName );
     }
+    */
 
     /**
      * Test setup
      */
-    public void setUp()
+    /*
+	public void setUp()
         throws Exception
     {
         JCS.setConfigFilename( "/TestRemoval.ccf" );
         JCS.getInstance( "testCache1" );
     }
-
+	*/
     /**
      * Main method passes this test to the text test runner.
      *
      * @param args
      */
+   
+    /*
     public static void main( String args[] )
     {
         String[] testCaseName = { JCSRemovalSimpleConcurrentTest.class.getName() };
         junit.textui.TestRunner.main( testCaseName );
     }
 
+    */
+	
+	@BeforeClass
+    public static void configure() throws CacheException {
+   	 
+		JCS.setConfigFilename( "/TestRemoval.ccf" );
+        JCS.getInstance( "testCache1" );
+        jcs = JCS.getInstance( "testCache1" );
+
+        count = 500;
+        
+	}
+    
     /**
      * Verify that 2 level deep hierchical removal works.
      *
      * @throws Exception
      */
+	
+	@Test
     public void testTwoDeepRemoval()
         throws Exception
     {
 
         System.out.println( "------------------------------------------" );
         System.out.println( "testTwoDeepRemoval" );
-
-        int count = 500;
-        JCS jcs = JCS.getInstance( "testCache1" );
-
+        
         for ( int i = 0; i <= count; i++ )
         {
             jcs.put( "key:" + i + ":anotherpart", "data" + i );
@@ -109,15 +129,14 @@ public class JCSRemovalSimpleConcurrentTest
      *
      * @throws Exception
      */
+	
+	@Test
     public void testSingleDepthRemoval()
         throws Exception
     {
 
         System.out.println( "------------------------------------------" );
         System.out.println( "testSingleDepthRemoval" );
-
-        int count = 500;
-        JCS jcs = JCS.getInstance( "testCache1" );
 
         for ( int i = 0; i <= count; i++ )
         {
@@ -150,15 +169,14 @@ public class JCSRemovalSimpleConcurrentTest
      *
      * @throws Exception
      */
+	
+	@Test
     public void testClear()
         throws Exception
     {
 
         System.out.println( "------------------------------------------" );
         System.out.println( "testRemoveAll" );
-
-        int count = 500;
-        JCS jcs = JCS.getInstance( "testCache1" );
 
         for ( int i = 0; i <= count; i++ )
         {
@@ -196,15 +214,14 @@ public class JCSRemovalSimpleConcurrentTest
      *
      * @throws Exception
      */
+	
+	@Test
     public void testClearRepeatedlyWithoutError()
         throws Exception
     {
 
         System.out.println( "------------------------------------------" );
         System.out.println( "testRemoveAll" );
-
-        int count = 500;
-        JCS jcs = JCS.getInstance( "testCache1" );
 
         jcs.clear();
 
@@ -239,4 +256,5 @@ public class JCSRemovalSimpleConcurrentTest
 
     }
 }
+
 
