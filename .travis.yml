@@ -1,19 +1,28 @@
-endpoints:
-  https://api.travis-ci.org/:
-    access_token: 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
-language: java
-os:
-- linux
-dist: xenial
-install:
-- 'true'
-addons:
-  sonarcloud:
-    organization: "dibattistamattia"
-    token:
-      secure: "N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4="
-script:
-- sonar-scanner
-env:
-  global:
-    secure: N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4=
+{
+  "language": "java",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "install": [
+    "true"
+  ],
+  "addons": {
+    "sonarcloud": {
+      "organization": "dibattistamattia",
+      "token": {
+        "secure": "N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4="
+      }
+    }
+  },
+  "script": [
+    "sonar-scanner"
+  ],
+  "env": {
+    "global": [
+      {
+        "secure": "N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4="
+      }
+    ]
+  }
+}
