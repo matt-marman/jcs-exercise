@@ -1,34 +1,19 @@
-#configuration for jacoco on Sonarcloud
-#https://steinar.bang.priv.no/2020/03/30/how-to-get-test-coverage-back-in-sonarcloud-maven-builds/
-
-#Problem with TRAVIS-CI.com login 
-#https://github.com/travis-ci/travis.rb/issues/788
-
-{
-  "endpoints": {
-    "https://api.travis-ci.org/": {
-      "access_token": "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"
-    }
-  },
-
-  "language": "java",
-  "os": [
-    "linux"
-  ],
-  "dist": "xenial",
-  "install": [
-    "true"
-  ],
-
-  "addons": {
-    "sonarcloud": {
-      "organization": "dibattistamattia", 
-      "token": {
-        "secure": "RysxJnixekFo1x6L7LvqVYBfdTznd+gMtQDTj52G4OfmtzD6D8xWOt9+iWqPktHZ52ybFnQa4KaRGxSorqbAXthNzVHb7juRpJJC2eAAekFZNzW+dfK+XWBmQgGs+cjrVK27VdRxGJAmynfo90jitruhdRtesNhlhBsX14sM7Qo7Pfr/LGmg3+dK+Nz1r2daX7J0sr45YHWkillyhwkL+KFXfhJT7kbguBC41nTIGe1t2xztDiBRdzOYJTPGV1ACfJowOQDdKHXSUrRNI2EK5HUxdd6/YOgJo1Ewv3a/Ozn9g7CBLGjith9th9HLW9WEks5fpKGh8T22u0uAlsailwbS6DJY0EEUSMP/KNzw/aiMZEgEz8AwTlPoD7YYm79cdSwdf8s8orVpOsRP8vjE5SRsFGHRC/fsXtZYL77RIEqRqoHZZ2VEf+F3gk5qb9J+Jd06ekORwK4VquEVnka9DA8B86NyC5i8ybj6kdMzRq5JkEVZJusueBro/rjauMIOL4yXz2wyNiP7zKlLR6KYjbhm7fxh85sI755+i+ByIieyoLDnpq90rJf4V4c5MOvj6Hik1NeE38NrkKUelYrXQDyFKDelu+xJmr6/bLgWgltU/Uxtyf0nFxLQeB8PHH5EQHty9odk4rGWmKuVcjT3909zOn0yqMWTcmD0ucyuMZQ="
-      }
-    }
-  }, 
-  "script": [
-    "mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar"
-  ]
-}
+endpoints:
+  https://api.travis-ci.org/:
+    access_token: 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
+language: java
+os:
+- linux
+dist: xenial
+install:
+- 'true'
+addons:
+  sonarcloud:
+    organization: dibattistamattia
+    token:
+      secure: RysxJnixekFo1x6L7LvqVYBfdTznd+gMtQDTj52G4OfmtzD6D8xWOt9+iWqPktHZ52ybFnQa4KaRGxSorqbAXthNzVHb7juRpJJC2eAAekFZNzW+dfK+XWBmQgGs+cjrVK27VdRxGJAmynfo90jitruhdRtesNhlhBsX14sM7Qo7Pfr/LGmg3+dK+Nz1r2daX7J0sr45YHWkillyhwkL+KFXfhJT7kbguBC41nTIGe1t2xztDiBRdzOYJTPGV1ACfJowOQDdKHXSUrRNI2EK5HUxdd6/YOgJo1Ewv3a/Ozn9g7CBLGjith9th9HLW9WEks5fpKGh8T22u0uAlsailwbS6DJY0EEUSMP/KNzw/aiMZEgEz8AwTlPoD7YYm79cdSwdf8s8orVpOsRP8vjE5SRsFGHRC/fsXtZYL77RIEqRqoHZZ2VEf+F3gk5qb9J+Jd06ekORwK4VquEVnka9DA8B86NyC5i8ybj6kdMzRq5JkEVZJusueBro/rjauMIOL4yXz2wyNiP7zKlLR6KYjbhm7fxh85sI755+i+ByIieyoLDnpq90rJf4V4c5MOvj6Hik1NeE38NrkKUelYrXQDyFKDelu+xJmr6/bLgWgltU/Uxtyf0nFxLQeB8PHH5EQHty9odk4rGWmKuVcjT3909zOn0yqMWTcmD0ucyuMZQ=
+script:
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar
+env:
+  global:
+    secure: I137bC+P/YvZPVJru+cq1rgesbKN2l/f17el75Wk00Ox5hmYRkNideTxPUtLwRshyb0PgKwjYuwcq4QejFsrFb6tRbueRwjp3W8oRIQvC58DJS7Hd7S6iF5ZNm6hlkbtZRhtyMVntYWQ45jijUdN+3GENERqbwP9TdEt30lg+8sHw9X+kJiEpUiWpq66xi8X97HUOQ6ImoSqUikY533EWDZ7Qt0iHohTRSdCPV8ZzyMKJR4/6V4LHciSCmb62X/5wIlKrLTzpZf2L8yfevXk0kuoZ45y9/ke7UldY7OGwK7fNmNqgrx4gz19JMaFl15+EX2EfUKJ9CPajwmaYZNh8YaBbssF4iSJcsr18b9Snhi0c+h912ezkTZx4cI4UHwumZK56qZ6micyacsDynq4Ymo3gpwq1N5L/SgDLdyN/jiKm8YtMdKgOQL/s2H/JQu/mPm3DWvLTVEyZeCzvIpGjv2e0dV56Uq63hQ5ACOzcQr8/q+zMJz/8PG5fdc3+KiaAgsiN1JMgAlwjNYFLCtiFivZJMXpRJs6PZAejt1BqC+9Fz2oOKUjO0oqQhEBlnUcvr+vAKe9achQgf2Uk9h8Gm1a1b7vk3qr3aGSHPyQvTMj7+1XnxT9W9K9Qnn7mTdqoRep/uLn7VDL/4N2hnIBRYhUo2/P8oVsTjMhiDxku/4=
