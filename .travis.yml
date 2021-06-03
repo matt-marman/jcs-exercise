@@ -11,7 +11,7 @@ addons:
   sonarcloud:
     organization: dibattistamattia
     token:
-      secure: ${SECRET_KEY}
+      secure: "82dace1068e439136d64a251baee676b8b9334b2"
 script:
 #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar
 - sonar-scanner
