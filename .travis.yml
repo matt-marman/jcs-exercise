@@ -9,7 +9,7 @@
     "https://api.travis-ci.org/": {
       "access_token": "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"
     }
-  }
+  },
 
   "language": "java",
   "os": [
