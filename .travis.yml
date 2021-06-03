@@ -1,7 +1,16 @@
 #configuration for jacoco on Sonarcloud
 #https://steinar.bang.priv.no/2020/03/30/how-to-get-test-coverage-back-in-sonarcloud-maven-builds/
 
+#Problem with TRAVIS-CI.com login 
+#https://github.com/travis-ci/travis.rb/issues/788
+
 {
+  "endpoints": {
+    "https://api.travis-ci.org/": {
+      "access_token": "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"
+    }
+  }
+
   "language": "java",
   "os": [
     "linux"
@@ -15,7 +24,7 @@
     "sonarcloud": {
       "organization": "dibattistamattia", 
       "token": {
-        "secure": "aObRVBUHdl7E3bz4mqAOyGyPc6Orpwnceux3b497y6EhWtViigcOG+eaeAKHxozAPbiwp8H1n2eGGuUjiHQ/FQdLv2YyCkUXCtHg5y1SNlMdib8tgX51hRE1yajK8Z+pdiqJ9EuYomp2c7pPgXAIczAHaeYQt58O8RzD0L2pdwT7SpG+TroMZ44ZaqQCqHdJQlV/HZY7Ju4rPV5MPQPW74goGjK5KrndanmSI2xqv9Lq0y93GdZFZ6usBMTEetU84od0Ey8FHoUOf1iNwLQKcO50IwwWxUekGh1GBqZynMBiF7Od1eS9gk6CW2asTXQ/gWC4nzEsQ/nG8LfB1fz/lSfUaXzpHIhxannqx5/Jz0pL0N9SfrH3qQc9T1nPrKUA1Gy/qihFJWUvz6TwAx6/D8sfB/ZM2AR3HI0YnBXP0C3a1R1JL2x5rTZ1JTntL6P40YwEglMFHZ39u+YGdxEX0oeRtr18/XpdzJwP9cA9R6np7lQVXMExGUBNPjwyxKwxgryITg8/F1Xi1iNin5MHsbecVcaP0qrhgzgVKt6weRv22tOOkgd0T8/ruIq+V1YdV4ieIQMRYTNmnQpso9nPFOyRVvha3GVUi8bwhjjD/JiFIRDOZFA4YswfqnctQUsrE7RVqcF/6hVqkpX2Wsj5uRiV43XUpMV69jNBM2KKZVM="
+        "secure": "RysxJnixekFo1x6L7LvqVYBfdTznd+gMtQDTj52G4OfmtzD6D8xWOt9+iWqPktHZ52ybFnQa4KaRGxSorqbAXthNzVHb7juRpJJC2eAAekFZNzW+dfK+XWBmQgGs+cjrVK27VdRxGJAmynfo90jitruhdRtesNhlhBsX14sM7Qo7Pfr/LGmg3+dK+Nz1r2daX7J0sr45YHWkillyhwkL+KFXfhJT7kbguBC41nTIGe1t2xztDiBRdzOYJTPGV1ACfJowOQDdKHXSUrRNI2EK5HUxdd6/YOgJo1Ewv3a/Ozn9g7CBLGjith9th9HLW9WEks5fpKGh8T22u0uAlsailwbS6DJY0EEUSMP/KNzw/aiMZEgEz8AwTlPoD7YYm79cdSwdf8s8orVpOsRP8vjE5SRsFGHRC/fsXtZYL77RIEqRqoHZZ2VEf+F3gk5qb9J+Jd06ekORwK4VquEVnka9DA8B86NyC5i8ybj6kdMzRq5JkEVZJusueBro/rjauMIOL4yXz2wyNiP7zKlLR6KYjbhm7fxh85sI755+i+ByIieyoLDnpq90rJf4V4c5MOvj6Hik1NeE38NrkKUelYrXQDyFKDelu+xJmr6/bLgWgltU/Uxtyf0nFxLQeB8PHH5EQHty9odk4rGWmKuVcjT3909zOn0yqMWTcmD0ucyuMZQ="
       }
     }
   }, 
