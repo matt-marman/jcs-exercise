@@ -1,3 +1,6 @@
+#configuration for jacoco on Sonarcloud
+#https://steinar.bang.priv.no/2020/03/30/how-to-get-test-coverage-back-in-sonarcloud-maven-builds/
+
 {
   "language": "java",
   "os": [
@@ -8,7 +11,14 @@
     "true"
   ],
 
+  addons:
+  sonarcloud:
+    organization: "dibattistamattia" # the key of the org you chose at step #3
+    token:
+      secure: "aObRVBUHdl7E3bz4mqAOyGyPc6Orpwnceux3b497y6EhWtViigcOG+eaeAKHxozAPbiwp8H1n2eGGuUjiHQ/FQdLv2YyCkUXCtHg5y1SNlMdib8tgX51hRE1yajK8Z+pdiqJ9EuYomp2c7pPgXAIczAHaeYQt58O8RzD0L2pdwT7SpG+TroMZ44ZaqQCqHdJQlV/HZY7Ju4rPV5MPQPW74goGjK5KrndanmSI2xqv9Lq0y93GdZFZ6usBMTEetU84od0Ey8FHoUOf1iNwLQKcO50IwwWxUekGh1GBqZynMBiF7Od1eS9gk6CW2asTXQ/gWC4nzEsQ/nG8LfB1fz/lSfUaXzpHIhxannqx5/Jz0pL0N9SfrH3qQc9T1nPrKUA1Gy/qihFJWUvz6TwAx6/D8sfB/ZM2AR3HI0YnBXP0C3a1R1JL2x5rTZ1JTntL6P40YwEglMFHZ39u+YGdxEX0oeRtr18/XpdzJwP9cA9R6np7lQVXMExGUBNPjwyxKwxgryITg8/F1Xi1iNin5MHsbecVcaP0qrhgzgVKt6weRv22tOOkgd0T8/ruIq+V1YdV4ieIQMRYTNmnQpso9nPFOyRVvha3GVUi8bwhjjD/JiFIRDOZFA4YswfqnctQUsrE7RVqcF/6hVqkpX2Wsj5uRiV43XUpMV69jNBM2KKZVM=" # encrypted value of your token
+
   "script": [
-    "mvn test"
+    "mvn test",
+    "sonar-scanner"
   ]
 }
