@@ -1,28 +1,17 @@
-{
-  "language": "java",
-  "os": [
-    "linux"
-  ],
-  "dist": "xenial",
-  "install": [
-    "true"
-  ],
-  "addons": {
-    "sonarcloud": {
-      "organization": "dibattistamattia",
-      "token": {
-        "secure": "N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4="
-      }
-    }
-  },
-  "script": [
-    "sonar-scanner"
-  ],
-  "env": {
-    "global": [
-      {
-        "secure": "N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4="
-      }
-    ]
-  }
-}
+language: java
+os:
+- linux
+dist: xenial
+install:
+- 'true'
+addons:
+  sonarcloud:
+    organization: dibattistamattia
+    token:
+      secure: N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4=
+script:
+- sonar-scanner
+env:
+  global:
+  - secure: N0A0XBszx591LZopACV9q7vhlJuUrCL17c4+YUa0bckOKSeePoo61lLM0zvzXpPZV9hngQn9mrcO31U1zKEcxtF19sPKhzp4A1LgDiB/rftiBAj7aGdZUD+b8K7gIFaHYuwsPImikT/SqoG+feg54siO9Ewe84Q2BbLU5ZmYuLYczyc77KERLcc4bnBiJ6AWmVVph8MROG1Dpf/MwenKYqKqyjBMlVOASVJIIFYDy9ati0gAhGMeIieuu6vUOGqRlYNs/TFPlVUrr1aS/UJC2nwVUQM8Pbb1gwvokaVabS9FiYAIenZFfekd9pCSKUvmEwbSeB6Ct3J5mlFcdXwyMM0uKMq8BTf64T7mFYkRWsaFSqc6KZN+aG4i2x+1OSraQQ1tzpqP0luy5ZIYUiLejRUV5FVMZNOx4BF9gWDaX+JDB3zYjWFY6TKS8LAFrCeRrjamyu1sSTgtWAEkTnsIMcbA1rmcsA9ZJtvwzcQCzQaNACQtMIPyopoJ1KK+7poJJcVLEEujJSn3K01xPCexjGT4vwJxqcx9q5xiPk409UMW5X41O8WUMaLOVDftHZC7UJwGvAjoEN3xZI2eGSeJCuZcv8tJh/MiLg4r8wOTP0AzaHPohv3PyDU+bSV+hJMwL14traJoluIPUiT7W7j197ni9ycM0xM4Qb4Jur4Qbl4=
+  - secure: Ty/pnQzt+L3hkqS5TE+6r9lXUMpsT9213XO2W2BUce7ZQ8QZ1jhnwrAITBbq0bitS8+m6b7UbdILcnBKbMAMG3hh9tjKFeu7fMwqXXkg95NXroFkiEdzsGT2Lqks9v8Vz0V7DXJ+xWWNE/fIVeSXqn0ZXMKCZNK4v947YJ5XdxVfKNExOH/7VMH3UkHs0JPQDLamPauyIt/zxI9zd/OES/Pot0rYFsUxfAAT82gTGHBITwsCSObe/MoKxUb18TSBKqLfV4BPVkfjskw4Wp8RTncZELElRRJrOix2gATZn9xbRier3erKLwCVyxkk8kCMGOFZagbZmp1EUB+gGFoR6ZzsFSZ5f0or3bBmTAsyQ51/DCpcgWKl0N6aJ0w9PVqOFotPOxlzrQ2MSe6Wu4QBrzCZsEewfnDOLOh3gqTRtHsv6bw06qe89o0UvxAXLwjIn0UIvuePFI8usfLzL2YGQt5S2JUc/AN5GGTsrTfNqcrn4vuTklmRDvcMtmwg9hABeMwVBBMkE8ouN5xlAHrdexBKcIJ0F531NBrDlZcOCafLwKwqHoJjxtBXagAlb7F7c0afug/R6UXDb2kYZ+j3Gjk6YB94Hg/yHSy0MvOCkxW7nnjw5ty8vIZreERKUihmGh8y3/yXR38wzmohqAc6KpqSFcsTNEvlt65/O15jGgc=
