@@ -1,3 +1,6 @@
+ endpoints:
+   https://api.travis-ci.com/:
+     access_token: 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
 language: java
 os:
 - linux
