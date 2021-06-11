@@ -1,5 +1,5 @@
 # JCS Parametrized Tests
-[![Build Status](https://travis-ci.org/matt-marman/jcs-exercise.svg?branch=main)](https://travis-ci.org/matt-marman/jcs-exercise)
+[![Build Status](https://travis-ci.com/matt-marman/jcs-exercise.svg?branch=main)](https://travis-ci.com/matt-marman/jcs-exercise)
 
 ### How to generate jacoco.exec
 >mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package
