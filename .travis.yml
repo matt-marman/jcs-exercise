@@ -1,16 +1,14 @@
- endpoints:
-   https://api.travis-ci.com/:
-     access_token: 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
-language: java
-os:
-- linux
-dist: xenial
-install:
-- 'true'
-addons:
-  sonarcloud:
-    organization: dibattistamattia
-    token:
-      secure: DL5LIGpFlfmglx8t9y8E76+b8s4mRZZoM7yckbyCXD6ZUAXgM1zBXuuwxBxEPp2Cb0NMDyWMNQfZ9VprjhL4jtFfmgIQ04vrHc7VmJvEhW0ARz8lJhZLJYQsdCVGGEt+56rCP/1q2MKSzRDcz7Ae2yvDWU29d2H5w/JCr7e5xuOQtBtHt8ysnY3DkYQCrU/hQqnPyJcfuDhf+K2DzIytgwvn4+0DayNovaFqIKXnOr1ZjXHWekBH8g2kaMK3Wc5CLCOE7qWP5hdw1A6BIm/LRpUVmPJx+KcAxU6xA4Mt3gUcevYtlQEGTVQvaZ8+RwE+/0rwLG+d7ZtpKTgyXc/okRnlj/j/VMU62abn5a0kerMDMzJpU8eN8orNFE1La6bvrrRTvdqklyFAkl9GQwntH+yKuvfEljT756XIw7LgOhag5EC4U6842pkfCYv9yNDqlCm1FSKt8TuaLE2srL5sX/gSebnM0c2RyOie85LMkitlDaknw2cCDkdvWRMyxX2qonYkmtpt4S/dPWoCN72OnnOwUaODvitcu50+FfyGpnMzIWTjt1ie+IfybgSY6Do5QFLhJ/sPumhiJjV4YPOXa8DuL5yL6OKPqd7aqurCoXrj/l8mwuWR553lkEoYOnO71UKBkfEjSMeoX/fWbULSAxS2WjibGucnspkmGSNsmyM=
-script:
-- sonar-scanner
+{
+  "language": "java",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "install": [
+    "true"
+  ],
+
+  "script": [
+    "mvn test"
+  ]
+}
